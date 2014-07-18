@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project MiklasLauncher with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas.jar">
+            <manifest>
+                <attribute name="Main-Class" value="miklas.Launcher"/>
+                <attribute name="Class-Path" value=". miklas_lib/aplu5.jar miklas_lib/JGameGrid.jar miklas_lib/commons-configuration-1.9.jar miklas_lib/junit.jar miklas_lib/org.hamcrest.core_1.3.0.v201303031735.jar miklas_lib/jfxrt.jar miklas_lib/jmf.jar miklas_lib/mp3plugin.jar miklas_lib/jansi-1.9.jar miklas_lib/slf4j-api-1.7.5.jar miklas_lib/slf4j-log4j12-1.7.5.jar miklas_lib/log4j-1.2.17.jar"/>
+            </manifest>
+            <fileset dir="C:/Projekte/04_Privat/01_Miklas/01_miklas/MiklasLauncher/bin"/>
+            <fileset dir="C:/Projekte/04_Privat/01_Miklas/01_miklas/Miklas/bin"/>
+            <fileset dir="C:/Projekte/11_CommonUtils/CommonUtils/bin"/>
+            <fileset dir="C:/Projekte/04_Privat/01_Miklas/01_miklas/MiklasEvents/bin"/>
+            <fileset dir="C:/Projekte/04_Privat/01_Miklas/01_miklas/MiklasExternalMinds/bin"/>
+        </jar>
+        <delete dir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <mkdir dir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte/04_Privat/01_Miklas/01_miklas/Libs/aplu5.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte/04_Privat/01_Miklas/01_miklas/Libs/JGameGrid.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte/04_Privat/01_Miklas/01_miklas/Libs/commons-configuration-1.9.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte_Eclipse/eclipse/plugins/org.junit_4.11.0.v201303080030/junit.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte_Eclipse/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Program Files/Java/jdk1.7.0_45/jre/lib/jfxrt.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte/04_Privat/01_Miklas/01_miklas/Libs/jmf_2_1/jmf.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte/04_Privat/01_Miklas/01_miklas/Libs/jmf_2_1/mp3plugin.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte/11_CommonUtils/CommonUtils/lib/jansi-1.9.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte/11_CommonUtils/CommonUtils/lib/slf4j-1.7.5/slf4j-api-1.7.5.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte/11_CommonUtils/CommonUtils/lib/slf4j-1.7.5/slf4j-log4j12-1.7.5.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+        <copy file="C:/Projekte/11_CommonUtils/CommonUtils/lib/apache-log4j-1.2.17/log4j-1.2.17.jar" todir="C:/Projekte/04_Privat/01_Miklas/01_miklas/deploy/bin/miklas_lib"/>
+    </target>
+</project>
